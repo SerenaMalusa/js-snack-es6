@@ -43,3 +43,13 @@ const studentsNames = students.map ((student) => student.name.toUpperCase());
 
 // 5. stampo in console il nuovo array
 console.log(studentsNames);
+
+// 6. applico il methodo filter all'array 
+const bestStudents = students.filter ((student) => {
+
+    const isOver70 = student.grades >= 70;
+    return isOver70;
+
+});
+
+console.log(bestStudents);

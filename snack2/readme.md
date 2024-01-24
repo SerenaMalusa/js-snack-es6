@@ -22,7 +22,14 @@ Questo è l'elenco degli studenti:
 ### Svolgimento
 
 1. creo un array di oggetti contenente tutti i dati degli studenti
+
 2. applico il methodo map all'array 
     3. per ogni studente
     4. il nuovo nome sarà uguale al nome studente tutto in maiuscolo
 5. stampo in console il nuovo array
+
+6. applico il methodo filter all'array 
+    7. per ogni studente
+    8. se i voti sono maggiori di 70 lo trascrivo
+9. stampo in console il nuovo array
+
