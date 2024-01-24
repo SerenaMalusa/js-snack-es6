@@ -31,4 +31,4 @@ const placeholders = vips.map ((vip,index) => {
 });
 
 // 8. stampo il nuovo array
-console.log(placeholders);
+console.log('elenco segnaposti', placeholders);
