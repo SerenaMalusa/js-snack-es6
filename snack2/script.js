@@ -45,10 +45,8 @@ const studentsNames = students.map ((student) => student.name.toUpperCase());
 console.log(studentsNames);
 
 // 6. applico il methodo filter all'array 
-const bestStudents = students.filter ((student) => {
+// 8. se i voti sono maggiori di 70 lo trascrivo
+const bestStudents = students.filter ((student) => student.grades >= 70);
 
-    return student.grades >= 70;
-
-});
-
+// 9. stampo in console il nuovo array
 console.log(bestStudents);
