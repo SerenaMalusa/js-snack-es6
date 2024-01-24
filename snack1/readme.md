@@ -28,9 +28,9 @@ Generiamo e stampiamo in console l'array di oggetti per i segnaposto.
 
 1. applico il metodo map all array vips, che ne modificherà il contenuto
     2. per ogni vip
-    3. creo un oggetto con le seguenti chievi:valori
+    3. creo un oggetto con le seguenti chiavi:valori
         4. nome del tavolo : 'Tavolo VIP'
         5. nome dell'ospite : vip
         6. numero posto : numero random da 1 al numero di tutti i vip
-    7. restituisco l'oggetto creto
+    7. restituisco l'oggetto creato
 8. stampo il nuovo array
