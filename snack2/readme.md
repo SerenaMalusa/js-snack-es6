@@ -33,3 +33,7 @@ Questo è l'elenco degli studenti:
     8. se i voti sono maggiori di 70 lo trascrivo
 9. stampo in console il nuovo array
 
+10. applico il metodo filter all'array
+    11. per ogni studente
+    12. se i voti sono maggiori di 70 e l'id è maggiore di 120 lo trascrivo
+13. stampo in console il nuovo array

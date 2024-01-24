@@ -41,12 +41,18 @@ const students = [
 // 4. il nuovo nome sarà uguale al nome studente tutto in maiuscolo
 const studentsNames = students.map ((student) => student.name.toUpperCase());
 
-// 5. stampo in console il nuovo array
-console.log(studentsNames);
-
 // 6. applico il methodo filter all'array 
 // 8. se i voti sono maggiori di 70 lo trascrivo
 const bestStudents = students.filter ((student) => student.grades >= 70);
 
-// 9. stampo in console il nuovo array
-console.log(bestStudents);
+// 10. applico il metodo filter all'array
+// 12. se i voti sono maggiori di 70 e l'id è maggiore di 120 lo trascrivo
+const bestLatetsStudents = students.filter ((student) => student.grades >= 70 && student.id >= 120);
+
+// stampo tutto in console
+console.log(`
+Nomi studenti in maiuscolo:`, studentsNames, `
+
+Elenco studenti con voti >= a 70:`, bestStudents, `
+
+Elenco studenti con voti >= a 70 e id >= 120`, bestLatetsStudents);
