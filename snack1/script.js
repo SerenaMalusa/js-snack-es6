@@ -16,8 +16,8 @@ const vips = [
 // 1. applico il metodo map all array vips, che ne modificherà il contenuto
 const placeholders = vips.map ((vip,index) => {
 
-    // 3. creo un oggetto con le seguenti chiavi:valori
-    const placeholder = {
+    // 7. creo un oggetto con le seguenti chiavi:valori e lo restituisco
+    return {
 
         // 4. nome del tavolo : 'Tavolo VIP'
         tableName : "Tavolo Vip",
@@ -26,10 +26,7 @@ const placeholders = vips.map ((vip,index) => {
         // 6. numero posto : numero random da 1 al numero di tutti i vip
         placeNum : index +1
 
-    }
-
-    // 7. restituisco l'oggetto creato
-    return placeholder;
+    };
 
 });
 
