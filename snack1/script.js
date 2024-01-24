@@ -23,8 +23,8 @@ const placeholders = vips.map ((vip,index) => {
         tableName : "Tavolo Vip",
         // 5. nome dell'ospite : vip
         guestName : vip,
-        // 6. numero posto : numero random da 1 al numero di tutti i vip
-        placeNum : index +1
+        // 6. numero posto : indice ogg vip + 1
+        placeNum : index + 1
 
     };
 
