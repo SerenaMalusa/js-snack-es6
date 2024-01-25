@@ -40,3 +40,17 @@ const [lighterBike] = bikes.filter((bike) => bike.weight == minWeight);
 
 // 8. lo stampo in console
 console.log(`la bici ${lighterBike.name} è la più leggera di tutte con un peso di ${lighterBike.weight}Kg`);
+
+// BONUS prendo gli elementi dal DOM per la stampa in pagina
+const container = document.querySelector('.container');
+const row = document.querySelector('.row');
+
+bikes.forEach((bike) => {
+
+    // metto la card nella row
+    row.appendChild(createCard(bike.name,bike.weight,'card'));
+
+});
+
+// metto la card alla fine del container
+container.appendChild(createCard(lighterBike.name,lighterBike.weight,'card','col-4','mx-auto'));
