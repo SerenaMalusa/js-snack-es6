@@ -1,34 +1,64 @@
-const vips = [
-    'Dwayne Johnson',
-    'Brad Pitt',
-    'Johnny Depp',
-    'Lady Gaga',
-    'Cristiano Ronaldo',
-    'Georgina Rodriguez',
-    'Chiara Ferragni',
-    'Fedez',
-    'George Clooney',
-    'Amal Clooney',
-    'Maneskin',
+const teams = [
+    {
+      name: 'Team Turtle',
+      score: 0,
+      foul: 0,
+    },
+    {
+      name: 'Team Frog',
+      score: 0,
+      foul: 0,
+    },
+    {
+      name: 'Team Penguin',
+      score: 0,
+      foul: 0,
+    },
+    {
+      name: 'Team Hippopotamus',
+      score: 0,
+      foul: 0,
+    },
+    {
+      name: 'Team Seal',
+      score: 0,
+      foul: 0,
+    },
+    {
+      name: 'Team Crocodile',
+      score: 0,
+      foul: 0,
+    },
+    {
+      name: 'Team Dolphin',
+      score: 0,
+      foul: 0,
+    },
   ];
 
+// 1. creo la funzione che genera un numero random da min a max inclusi
+const genRandomNum = (max, min = 1) => Math.floor(Math.random() * (max - min + 1) + min);
 
-// 1. applico il metodo map all array vips, che ne modificherà il contenuto
-const placeholders = vips.map ((vip,index) => {
+// 2. ciclo l'array e per ogni oggetto
+teams.forEach((team) => {
 
-    // 7. creo un oggetto con le seguenti chiavi:valori e lo restituisco
-    return {
-
-        // 4. nome del tavolo : 'Tavolo VIP'
-        tableName : "Tavolo Vip",
-        // 5. nome dell'ospite : vip
-        guestName : vip,
-        // 6. numero posto : indice ogg vip + 1
-        placeNum : index + 1
-
-    };
+    //3. applico la funzione alle chiavi score e foul dell'elemento
+    team.score = genRandomNum(100, 0);
+    team.foul = genRandomNum(10, 0);
 
 });
 
-// 8. stampo il nuovo array
-console.log('elenco segnaposti', placeholders);
+// 5. creo nuovo array con metodo map
+const teamsFouls = teams.map((team) => {
+
+    // 6. con il destructuring recupero le variabili da inserire nei nuovi oggetti
+    const {name,foul} = team;
+    return {
+        name,
+        foul
+    };
+
+})
+
+// 7. stampo in console
+console.log(teams, teamsFouls);
