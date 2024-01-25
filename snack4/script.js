@@ -62,3 +62,37 @@ const teamsFouls = teams.map((team) => {
 
 // 7. stampo in console
 console.log(teams, teamsFouls);
+
+// BONUS 
+// prendo gli elementi dal dom
+const rowEl = document.querySelector('.row');
+
+teams.forEach((team,index) => {
+
+  // creo i bottoni con il nome della squadra
+  const buttonEl = document.createElement('button');
+  buttonEl.classList.add(`team-${index}`, 'btn', 'btn-primary');
+  buttonEl.innerText = team.name;
+
+  // creo la card con i dati
+  const cardEl = document.createElement('div');
+  cardEl.classList.add(`team-info-${index}`, 'card', 'col-12', 'd-none');
+  cardEl.innerHTML = `
+    <h5 class="team-score">Punti: ${team.score}</h5>
+    <h5 class="team-foul">Falli: ${team.foul}</h5>
+  `
+  // prendo il bottone e gli aggiungo un event listener
+  buttonEl.addEventListener('click', function () {
+
+    // faccio apparire e sparire la card
+    cardEl.classList.toggle('d-none');
+
+  })
+
+  // aggiungo bottone e card al contenuto della row
+  rowEl.appendChild(buttonEl);
+  rowEl.appendChild(cardEl);
+  
+});
+
+
