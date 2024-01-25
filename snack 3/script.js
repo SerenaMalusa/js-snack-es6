@@ -1,34 +1,42 @@
-const vips = [
-    'Dwayne Johnson',
-    'Brad Pitt',
-    'Johnny Depp',
-    'Lady Gaga',
-    'Cristiano Ronaldo',
-    'Georgina Rodriguez',
-    'Chiara Ferragni',
-    'Fedez',
-    'George Clooney',
-    'Amal Clooney',
-    'Maneskin',
-  ];
+// 1. creo array di oggetti
+const bikes = [
+    {
+        name : 'Wilier 0 SLR',
+        weight : 6.5
+    },
+    {
+        name : 'Cannondale SuperSix EVOHi-MOD Disc Dura Ace',
+        weight : 8.0
+    },
+    {
+        name : 'Trek Emonda 2020',
+        weight : 6.81
+    },
+    {
+        name : 'Trek Emonda SLR',
+        weight : 4.65
+    },
+    {
+        name : 'SAVA Phantom 2.0 700C',
+        weight : 8.1
+    },
+]
 
+// 2. creo variabile peso minimo = peso oggetto 0
+let minWeight = bikes[0].weight;
 
-// 1. applico il metodo map all array vips, che ne modificherà il contenuto
-const placeholders = vips.map ((vip,index) => {
-
-    // 7. creo un oggetto con le seguenti chiavi:valori e lo restituisco
-    return {
-
-        // 4. nome del tavolo : 'Tavolo VIP'
-        tableName : "Tavolo Vip",
-        // 5. nome dell'ospite : vip
-        guestName : vip,
-        // 6. numero posto : indice ogg vip + 1
-        placeNum : index + 1
-
-    };
+// 3. ciclo tutti gli oggetti dell'array
+bikes.forEach((bike) => {
+    
+    // 4. se peso minimo >= del peso dell oggetto  
+    // 5. peso minimo diventa il peso di quell'oggetto 
+    if (minWeight > bike.weight) minWeight = bike.weight;
 
 });
 
-// 8. stampo il nuovo array
-console.log('elenco segnaposti', placeholders);
+// 6. filtro l'array e prendo solo l'elemento che ha peso = peso minimo
+// 7. e lo destrutturo direttamente in un oggetto
+const [lighterBike] = bikes.filter((bike) => bike.weight == minWeight);
+
+// 8. lo stampo in console
+console.log(`la bici ${lighterBike.name} è la più leggera di tutte con un peso di ${lighterBike.weight}Kg`);
