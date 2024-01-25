@@ -52,5 +52,5 @@ bikes.forEach((bike) => {
 
 });
 
-// metto la card alla fine del container
+// metto la card con la bici + leggera alla fine del container
 container.appendChild(createCard(lighterBike.name,lighterBike.weight,'card','col-4','mx-auto'));
