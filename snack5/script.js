@@ -40,7 +40,7 @@ let rightCar;
 // preparo il ciclo while
 let i = 0;
 // finchè isFound è falsa & il mio indice è più piccolo della lunghezza dell'array
-while ( isFound == false && i < cars.length) {
+while (isFound == false && i < cars.length) {
 
   // se la capienza di questa macchina è più grande del numero di persone inserito dall'utente
   if (cars[i].capacity >= userPeople) {
@@ -55,6 +55,7 @@ while ( isFound == false && i < cars.length) {
 
   // aumento la i per continuare il ciclo
   i++;
+
 }
 
 // stampo in console
